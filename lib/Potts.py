@@ -6,26 +6,6 @@ import numpy as np
 
 
 
-
-######################
-## Distance Functions
-######################
-
-def dstar_L2(v):
-	return np.linalg.norm(v-np.mean(v),2)**2
-
-def mustar_L2(v):
-	return  np.mean(v)
-
-
-def dstar_L1(v):
-	return np.linalg.norm(v-np.median(v),1)
-
-def mustar_L1(v):
-	return  np.median(v)
-
-
-
 ######################
 ##  L2 Potts
 ######################
@@ -98,3 +78,26 @@ def L1_Potts(y,gamma):
     		r = l+1 ; l = p[r-1] ;
 
 	return z
+
+
+
+
+
+
+
+######################
+## Distance Functions
+######################
+
+def dstar_L2(v):
+	return np.linalg.norm(v-np.mean(v),2)**2
+
+def mustar_L2(v):
+	return  np.mean(v)
+
+
+def dstar_L1(v):
+	return np.linalg.norm(v-np.median(v),1)
+
+def mustar_L1(v):
+	return  np.median(v)
